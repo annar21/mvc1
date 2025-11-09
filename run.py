@@ -1,8 +1,8 @@
-from app import create_app
-from app.utils.db import init_db
+from app.init import create_app
+from app.db import init_db
 
-app = create_app()
-
-if __name__ == '__main__':
+if __name__ == "__main__":
+    app = create_app()
     init_db()
+
     app.run(debug=True)
